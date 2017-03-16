@@ -1,0 +1,32 @@
+<%= form_for(testing_page) do |f| %>
+  <% if testing_page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(testing_page.errors.count, "error") %> prohibited this testing_page from being saved:</h2>
+
+      <ul>
+      <% testing_page.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :home %>
+    <%= f.text_field :home , class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :help %>
+    <%= f.text_field :help , class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :about %>
+    <%= f.text_field :about , class:"form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit :create, class:"btn btn-default"%>
+  </div>
+<% end %>

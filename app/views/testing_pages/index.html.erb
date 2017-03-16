@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Testing Pages</h1>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>Home</th>
+      <th>Help</th>
+      <th>About</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @testing_pages.each do |testing_page| %>
+      <tr>
+        <td><%= testing_page.home %></td>
+        <td><%= testing_page.help %></td>
+        <td><%= testing_page.about %></td>
+        <td><%= link_to 'Show', testing_page , class:"btn btn-xs btn-danger" %></td>
+        <td><%= link_to 'Edit', edit_testing_page_path(testing_page) , class:"btn btn-xs btn-danger" %></td>
+        <td><%= link_to 'Destroy', testing_page, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-xs btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Testing Page', new_testing_page_path , class:"btn btn-xs btn-danger" %>

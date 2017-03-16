@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+
+<div class="panel-heading">testing_page</div>
+
+<div class="panel-body">
+
+
+<p>
+  <strong>Home:</strong>
+  <%= @testing_page.home %>
+</p>
+
+
+<p>
+  <strong>Help:</strong>
+  <%= @testing_page.help %>
+</p>
+
+
+<p>
+  <strong>About:</strong>
+  <%= @testing_page.about %>
+</p>
+
+
+</div>
+
+<div class="panel-footer">
+
+<%= link_to 'Edit', edit_testing_page_path(@testing_page) ,class:"btn btn-xs btn-danger" %> |
+<%= link_to 'Back', testing_pages_path , class:"btn btn-xs btn-danger" %>
+
+</div></div>

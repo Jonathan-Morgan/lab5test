@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab5App</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+
+  <body class="container">
+    
+<nav class="navbar navbar-default">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Jonathan Morgan</a>
+    </div>
+    <ul class="nav navbar-nav">
+       <li><a href="/">Hello World</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Help</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+ 
+</nav>
+
+<div> <%= yield %> </div>    
+    
+    
+
+  </body>
+  
+</html>
